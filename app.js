@@ -46,7 +46,7 @@ function makeBtnData(categories){
          
 
         })
-        console.log(btn);
+        // console.log(btn);
 
         btn.innerText = item.category;       
         div.appendChild(btn)
@@ -79,7 +79,7 @@ function showbtnVideo(id){
 // display videos
 
 function makeVideoData(videos){
-    console.log(videos);
+    // console.log(videos);
     let vid = document.getElementById('video');
     vid.innerHTML = " "
 
@@ -175,6 +175,21 @@ function btnRemove(){
     for(let btn of clsBtn){
         btn.classList.remove('btnac')
     }
+}
+
+
+
+document.getElementById('inputValue').addEventListener('keyup',(event)=>{
+    // let input = document.getElementById('inputValue');
+    console.log(event.target.value);
+    searchInput(event.target.value);
+})
+
+function searchInput(text = ''){
+  console.log(text);
+  fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${text}`)
+  .then(res => res.json())
+  .then(data => makeVideoData(data.videos))
 }
 
 
