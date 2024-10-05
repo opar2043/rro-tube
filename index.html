@@ -12,7 +12,7 @@
 <body>
 
     <div class="w-11/12 mx-auto">
-        <div class="navbar bg-base-100 flex justify-between items-center py-4 border-b-2">
+        <div class="navbar bg-base-100 flex flex-col gap-4 md:flex-row justify-between items-center py-4 border-b-2">
             <img src="img/Logo.png" alt="" class="w-40 md:w-[160px]">
             <div>
                 <label class="input input-bordered flex items-center gap-2">
@@ -49,22 +49,61 @@
 
     <!-- Open the modal using ID.showModal() method -->
         <button id="modalBtn" class="btn hidden" onclick="my_modal_5.showModal()">open modal</button>
-        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-          <div class="modal-box">
-            
-            <div id="description">
 
-            </div>
+        <div id="modalDiv">
+          
+        </div>
+      
 
 
-            <div class="modal-action">
-              <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
-              </form>
-            </div>
+
+
+         <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Column 1: Logo and Description -->
+          <div>
+              <img src="img/Logo.png" alt="PH Tube Logo" class="w-40 mb-4">
+              <p class="text-gray-400">Your one-stop solution for watching amazing content. Stay tuned for the latest videos and blogs.</p>
           </div>
-        </dialog>
+
+          <!-- Column 2: Quick Links -->
+          <div>
+              <h3 class="font-semibold text-xl mb-4">Quick Links</h3>
+              <ul class="space-y-2">
+                  <li><a href="#" class="hover:underline">Home</a></li>
+                  <li><a href="#" class="hover:underline">Videos</a></li>
+                  <li><a href="#" class="hover:underline">Blogs</a></li>
+                  <li><a href="#" class="hover:underline">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Column 3: Follow Us -->
+          <div>
+              <h3 class="font-semibold text-xl mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                  <a href="#" class="text-gray-400 hover:text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M22.67 0H1.33A1.33 1.33 0 000 1.33v21.34A1.33 1.33 0 001.33 24h11.48v-9.33h-3.13V11.2h3.13V8.73c0-3.1 1.88-4.79 4.63-4.79 1.32 0 2.45.1 2.78.14v3.22h-1.9c-1.49 0-1.78.71-1.78 1.75v2.29h3.56l-.46 3.47h-3.1V24h6.08A1.33 1.33 0 0024 22.67V1.33A1.33 1.33 0 0022.67 0z"/>
+                      </svg>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M23.954 4.57a10.005 10.005 0 01-2.827.775 4.932 4.932 0 002.165-2.724 9.865 9.865 0 01-3.127 1.195 4.918 4.918 0 00-8.384 4.482A13.93 13.93 0 011.671 3.149 4.917 4.917 0 003.194 9.723 4.902 4.902 0 01.96 9.133v.062a4.916 4.916 0 003.946 4.827 4.996 4.996 0 01-2.213.085 4.924 4.924 0 004.604 3.417A9.864 9.864 0 010 21.54a13.9 13.9 0 007.548 2.212c9.057 0 14.01-7.503 14.01-14.01 0-.213-.005-.426-.014-.636A10.05 10.05 0 0024 4.59l-.046-.02z"/>
+                      </svg>
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-white">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M24 4.56c-.89.39-1.84.65-2.84.77a4.918 4.918 0 002.15-2.72 9.752 9.752 0 01-3.1 1.18A4.912 4.912 0 0016.616 3c-2.73 0-4.944 2.214-4.944 4.944 0 .388.043.764.127 1.128a13.957 13.957 0 01-10.15-5.14 4.93 4.93 0 001.524 6.573 4.92 4.92 0 01-2.24-.62v.062c0 2.37 1.688 4.345 3.93 4.794a4.957 4.957 0 01-2.224.084c.627 1.956 2.445 3.384 4.6 3.425a9.886 9.886 0 01-6.1 2.103c-.395 0-.786-.023-1.17-.067A13.968 13.968 0 007.548 21.5c9.058 0 14.01-7.503 14.01-14.01 0-.213-.005-.426-.014-.636A10.042 10.042 0 0024 4.56z"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div class="text-center mt-8 text-gray-400">
+          <p>&copy; 2024 PH Tube. All rights reserved.</p>
+      </div>
+  </footer>
        
         
     <script src="app.js"></script>

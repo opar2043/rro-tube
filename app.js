@@ -152,7 +152,7 @@ function showVideoDetails(videoId){
        console.log(videoId);
        fetch(`https://openapi.programming-hero.com/api/phero-tube/video/${videoId}`)
        .then(res => res.json())
-       .then(data => modalFunction(data))
+       .then(data => modalFunction(data.video.category_id))
 }
 
 // modal section
@@ -161,11 +161,8 @@ function modalFunction(mod){
      console.log(mod);
      document.getElementById('modalBtn').click()
 
-    let des = document.getElementById('description');
-    des.innerHTML = `
-        <img src=${mod.thumbnail} >
-        <p>${mod.description}</p>
-    `
+
+
 }
 
 
@@ -198,3 +195,4 @@ function searchInput(text = ''){
 
 loadBtnData()
 makeVideoDisplay()
+modalFunction()
